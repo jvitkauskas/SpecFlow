@@ -34,10 +34,7 @@ namespace TechTalk.SpecFlow.Generator.Project
       
                 specFlowProject.ProjectSettings.ConfigurationHolder = GetSpecFlowConfigurationHolder(projectFolder);
 
-                if (specFlowProject.ProjectSettings.ConfigurationHolder != null)
-                {
-                    specFlowProject.Configuration = _configurationLoader.LoadConfiguration(specFlowProject.ProjectSettings.ConfigurationHolder);
-                }
+                specFlowProject.Configuration = _configurationLoader.LoadConfiguration(specFlowProject.ProjectSettings.ConfigurationHolder);
 
                 return specFlowProject;
             }
